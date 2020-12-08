@@ -16,16 +16,16 @@ the "Deliver" stage of your Pipeline.
 
 Steps to do in jenkins 
 ----------------------
+Scenario 1:
+if job is create under maven project must have maven tool installed on jenkins
 1.Create a maven job
 2.git repo : https://github.com/rjshk013/simple-java-maven-app/
 3.goals & options : clean install
-
+scenario 2:
 If job is created under pipelineproject -configure pipeline section as below :
-
+No need of maven tool as the build process is done by docker maven container,if maven tool is installed no problem
 Definition : pipeline script from SCM
 give git repo : https://github.com/rjshk013/simple-java-maven-app
 Script Path :jenkins/Jenkinsfile (If jenkins file is inside jenkins folder,if it is present in root directory no need to give pathfor Jenkinsfile
 
-Preconfiguration of jenkins:
---------------------------
-tools : Maven,Docker must be installed (using install automatically option from jenkins global tool configuration)
+
